@@ -19,8 +19,6 @@ class PersonClass {
 public class Person {
     public static void main(String args[]){
         PersonClass person1 = new PersonClass("Souvik", "7/MMP lane", 20, "male", "student");
-        PersonClass person2 = new PersonClass("Sreya", "bangalore", 30, "female", "engineer");
         person1.showInfo();
-        person2.showInfo();
     }
 }
