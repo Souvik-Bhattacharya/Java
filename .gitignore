@@ -1,3 +1,7 @@
 *.class
 *.exe
 *.json
+*.iml
+*.xml
+/.idea
+/.vscode
