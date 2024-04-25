@@ -32,6 +32,8 @@ class Client{
                 response = input.nextLine();
                 System.out.println(response);
             }while(!message.equals("CLOSE"));
+            input.close();
+            userEntry.close();
         } catch(Exception e) {
             System.out.println(e.getMessage());
         }finally{

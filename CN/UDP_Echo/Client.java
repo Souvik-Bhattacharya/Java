@@ -48,6 +48,7 @@ public class Client
 			}
 		}
 	  while (!message.equals ("CLOSE"));
+	  userEntry.close();
 	}
 	catch (IOException e)
 	{

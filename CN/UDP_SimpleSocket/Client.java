@@ -1,7 +1,6 @@
 package CN.UDP_SimpleSocket;
 
 import java.net.*;
-import java.io.*;
 
 class Client{
     public static void main(String[] args) throws Exception{
@@ -11,5 +10,6 @@ class Client{
         InetAddress ip = InetAddress.getByName("localhost");
         DatagramPacket dp = new DatagramPacket(b, b.length, ip, port);
         ds.send(dp);
+        ds.close();
     }
 }

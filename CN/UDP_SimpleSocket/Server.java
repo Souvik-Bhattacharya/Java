@@ -1,7 +1,6 @@
 package CN.UDP_SimpleSocket;
 
 import java.net.*;
-import java.io.*;
 
 class Server{
     public static void main(String[] args) throws Exception{
@@ -11,5 +10,6 @@ class Server{
         ds.receive(dp);
         String str = new String(b);
         System.out.println("Received -> " + str);
+        ds.close();
     }
 }

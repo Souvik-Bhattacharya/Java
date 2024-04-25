@@ -10,7 +10,6 @@ public class Server
     {
         
          DatagramSocket serverSocket = new DatagramSocket(9876);
-         boolean bye=false;
 
       while(true) 
         {
@@ -49,8 +48,6 @@ public class Server
               System.out.println("connection ended by server");
               break;
           }
-          
-          
       }
         //close the connection
         serverSocket.close();

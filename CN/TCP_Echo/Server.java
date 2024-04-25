@@ -34,6 +34,7 @@ class Server{
                 message = input.nextLine();
             }
             output.println(numMessages + " messages received");
+            input.close();
         } catch(Exception e) {
             System.out.println(e.getMessage());
         }finally{
