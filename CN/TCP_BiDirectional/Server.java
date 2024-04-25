@@ -13,14 +13,16 @@ public class Server{
 			PrintWriter pw = new PrintWriter(os, true);
 			InputStream is = s.getInputStream();
 			BufferedReader receiveRead = new BufferedReader(new InputStreamReader(is));			
-			String receiveMsg, sendMsg;
-			while(true){
+			String receiveMsg, sendMsg = "";
+			while(!sendMsg.equalsIgnoreCase("close")){
 				if((receiveMsg = receiveRead.readLine()) != null){
-					System.out.println(receiveMsg);
+					System.out.println("Client: "+receiveMsg);
 				}
 				sendMsg = keyRead.readLine();
 				pw.println(sendMsg);
 				pw.flush();
 			}
+			System.out.println("Connection closed by server");
+			sc.close();
 	}
 }

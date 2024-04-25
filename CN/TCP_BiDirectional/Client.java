@@ -12,14 +12,16 @@ public class Client{
 			InputStream is = sc.getInputStream();
 			BufferedReader receiveRead = new BufferedReader(new InputStreamReader(is));			
 			System.out.println("Start the chat, type and press Enter key");
-			String receiveMsg, sendMsg;
-			while(true){
+			String receiveMsg, sendMsg = "";
+			while(!sendMsg.equalsIgnoreCase("close")){
 				sendMsg = keyRead.readLine();
 				pw.println(sendMsg);
 				pw.flush();
 				if((receiveMsg = receiveRead.readLine()) != null){
-					System.out.println(receiveMsg);
+					System.out.println("Server: "+receiveMsg);
 				}
 			}
+			System.out.println("Connection closed by client");
+			sc.close();
 	}
 }
